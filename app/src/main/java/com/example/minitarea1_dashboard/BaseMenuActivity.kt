@@ -15,7 +15,6 @@ open class BaseMenuActivity : AppCompatActivity() {
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean =
         when (item.itemId) {
-
             R.id.action_dashboard -> {
                 startActivity(Intent(this, DashboardActivity::class.java))
                 true

@@ -16,19 +16,16 @@ class RiegoActivity : BaseMenuActivity() {
         setContentView(R.layout.activity_riego)
         title = "Riego"
 
-        // Referencias a los botones
         btnOn = findViewById(R.id.btnOn)
         btnOff = findViewById(R.id.btnOff)
 
-        // Botón "Encender riego"
         btnOn.setOnClickListener {
             Toast.makeText(this, "Riego activado", Toast.LENGTH_SHORT).show()
         }
 
-        // Botón "Apagar riego"
         btnOff.setOnClickListener {
-            val rootView: View = findViewById(android.R.id.content)
-            Snackbar.make(rootView, "Riego detenido", Snackbar.LENGTH_LONG)
+            val root: View = findViewById(android.R.id.content)
+            Snackbar.make(root, "Riego detenido", Snackbar.LENGTH_LONG)
                 .setAction("Deshacer") {
                     Toast.makeText(this, "Riego activado", Toast.LENGTH_SHORT).show()
                 }
